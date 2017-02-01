@@ -1,0 +1,25 @@
+doctype html
+html
+  head
+    = metamagic site: 'pocket_app',
+      title: [:title, :site],
+      separator: ' – ',
+      og: { image: image_url('blueberry-logo.png') }
+    = meta_robots_tag
+    meta charset='utf-8'
+    meta name='viewport' content='width=device-width, initial-scale=1.0'
+    = render 'favicon'
+    = stylesheet_link_tag :application, media: 'all'
+    = csrf_meta_tags
+
+  body class=body_class
+    = render 'gtm'
+    = render 'header'
+    = render 'flashes'
+
+    = yield
+
+    = render 'footer'
+
+    = javascript_include_tag :application
+    = yield :javascript
