@@ -7,7 +7,7 @@ class VideoDecorator < Draper::Decorator
   end
 
   def video_iframe
-    h.content_tag(:iframe, nil, width: 520, height: 293, frameborder: 0, src: video_link, allowfullscreen: true)
+    h.content_tag(:iframe, nil, width: 989, height: 549, frameborder: 0, src: video_link, allowfullscreen: true)
   end
 
   def video_link
