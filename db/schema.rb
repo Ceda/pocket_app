@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170201184747) do
+ActiveRecord::Schema.define(version: 20170208163301) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -21,6 +21,7 @@ ActiveRecord::Schema.define(version: 20170201184747) do
     t.string  "resolved_title"
     t.string  "resolved_url"
     t.text    "excerpt"
+    t.boolean "visible",        default: true
   end
 
 end

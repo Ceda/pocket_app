@@ -4,5 +4,7 @@ div
   br
   = video.video_iframe
 
-  p = link_to 'Go to original page', video.resolved_url
+  p = link_to 'Go to original page', video.resolved_url, class: 'btn btn-primary'
+  - if params[:admin]
+    p = link_to 'Report video', video_report_path(video.id), class: 'btn btn-danger'
 hr
